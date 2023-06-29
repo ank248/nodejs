@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Pagina de inicio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" rel="stylesheet" type="text/css">
+        <link rel="preconnect" href="https://fonts.gstatic.com" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500&display=swap" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="./estilos/estilos.css">
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="logo-details">
+                <i class='bx bx-music' ></i>
+                <span class="logo-name">Melanie Martinez</span>
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <a href="index.html">
+                        <i class='bx bxs-home' ></i>
+                        <span class="links-name">Inicio</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                        <li><a href="index.html">Inicio</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="recursos/trayectoria.html">
+                        <i class='bx bx-sort-up'></i>
+                        <span class="links-name">Trayectoria</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                        <li><a href="recursos/trayectoria.html">Trayectoria</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="recursos/fotos.html">
+                        <i class='bx bxs-camera' ></i>
+                        <span class="links-name">Fotos</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                        <li><a href="recursos/fotos.html">Fotos</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="https://melaniemartinez.lnk.to/VOID">
+                        <i class='bx bxl-spotify'></i>
+                        <span class="links-name">Otras plataformas</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                        <li><a href="https://melaniemartinez.lnk.to/VOID">Otras plataformas</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="icon-link">
+                        <a href="#">
+                            <i class='bx bxs-playlist'></i>
+                            <span class="links-name">Albums</span>
+                        </a>
+                        <i class='bx bxs-chevron-down arrow' ></i>
+                    </div>
+                    <ul class="sub-menu">
+                        <li><a class="links-name" href="https://open.spotify.com/album/5JpH5T1sCYnUyZD6TM0QaY?si=HeyowSkhSk-nKAPVBWJhlA"></i>Crybaby</a></li>
+                        <li><a class="links-name" href="https://open.spotify.com/album/7ndwJvNRNljkK9r4JLNcX2?si=nQT6WJNOSmqM0jUUpQobJA"></i>K-12</a></li>
+                        <li><a class="links-name" href="https://open.spotify.com/album/6lbrHERXve89hrxuCpsJOg?si=TzrZjoG4SpeXkFiQnuQLLw"></i>Portals</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="icon-link">
+                        <a href="#">
+                            <i class='bx bxl-facebook-circle' ></i>
+                            <span class="links-name">Otras redes</span>
+                        </a>
+                        <i class='bx bxs-chevron-down arrow' ></i>
+                    </div>
+                    <ul class="sub-menu">
+                        <li><a class="links-name" href="https://www.youtube.com/channel/UC2YnEq5Fc5_zEO6bo0oNzCQ"></i>Youtube</a></li>
+                        <li><a class="links-name" href="https://www.instagram.com/littlebodybigheart/"></i>Instagram</a></li>
+                        <li><a class="links-name" href="https://twitter.com/melanielbbh"></i>Twitter</a></li>
+                        <li><a class="links-name" href="https://www.melaniemartinezmusic.com/"></i>Pagina oficial</a></li>
+                    </ul>
+                </li>
+                <li>
+            <div class="profile-details">
+                <div class="profile-content">
+                    <img src="imagenes/pfp.png" alt="profie-pic">
+                </div>
+                <div class="name-job">
+                    <div class="profile-name">Danna Enid</div>
+                    <div class="job">Estudiante</div>
+                </div>
+                <i class='bx bx-log-out'></i>
+            </div>
+        </li>
+            </ul>
+            
+        </div>
+        <section class="home-section">
+            <div class="home-content">
+                <i class='bx bx-menu'></i>
+                <span class="text">Menú</span>
+            </div>
+        </section>
+        <script>
+            let arrow = document.querySelectorAll(".arrow");
+            
+            for (var i = 0; i < arrow.length; i++){
+                arrow[i].addEventListener("click", (e)=>{
+                let arrowParent = e.target.parentElement.parentElement;
+                arrowParent.classList.toggle("showMenu");
+                })
+            }
+            let sidebar = document.querySelector(".sidebar");
+            let sidebarBtn = document.querySelector(".bx-menu");
+            console.log(sidebarBtn);
+            sidebarBtn.addEventListener("click", ()=>{
+                sidebar.classList.toggle("close");
+            });
+        </script>
+    </body>
+</html>
